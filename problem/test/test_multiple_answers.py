@@ -41,16 +41,12 @@ with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
                 answer_dct = dict(zip(answers_letters, answers_digits))
                 if answer_dct == true_answer:
                     score += 1
-                else:
-                    print(line)
 
             elif isinstance(true_answer, set):
                 new_line = line.upper()[ind:]
                 answers_letters = set(re.findall(let_pat, new_line))
                 if answers_letters == true_answer:
                     score += 1
-                else:
-                    print(line)
 
             elif isinstance(true_answer, float):
                 new_line = line[ind:]
@@ -60,8 +56,6 @@ with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
                 answer_digit = float(new_line)
                 if answer_digit == true_answer:
                     score += 1
-                else:
-                    print(line)
 
             elif isinstance(true_answer, bool):
                 new_line = line[ind:]
@@ -69,8 +63,6 @@ with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
                 answer_bool = strtobool(new_line[ind:].strip())
                 if answer_bool == true_answer:
                     score += 1
-                else:
-                    print(line)
 
             i += 1
 
