@@ -25,7 +25,7 @@ score = 0
 answer = '**Answer'
 
 path = os.getcwd()
-with open(os.path.join(path, 'problem', 'm_choice.py'), 'r') as f:
+with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
     for line in f.readlines():
         if answer in line:
 
