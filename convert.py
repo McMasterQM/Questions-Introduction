@@ -1,7 +1,7 @@
 import os
 
 path = os.getcwd()
-fname='m_choice.py'
+fname='Questions-IntroQM.py'
 
 os.system('jupyter nbconvert --to script Questions-IntroQM.ipynb')
 
