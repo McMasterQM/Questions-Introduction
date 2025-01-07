@@ -45,7 +45,7 @@ with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
             elif isinstance(true_answer, set):
                 new_line = line.upper()[ind:]
                 answers_letters = set(re.findall(let_pat, new_line))
-                if np.allclose(answers_letters, true_answer, rtol=1e-3):
+                if answers_letters == true_answer:
                     score += 1
 
             elif isinstance(true_answer, float):
@@ -54,7 +54,7 @@ with open(os.path.join(path, 'problem', 'Questions-IntroQM.py'), 'r') as f:
                 new_line = new_line[ind:].strip()
 
                 answer_digit = float(new_line)
-                if answer_digit == true_answer:
+                if np.allclose(answer_digit, true_answer, rtol=1e-3):
                     score += 1
 
             elif isinstance(true_answer, bool):
